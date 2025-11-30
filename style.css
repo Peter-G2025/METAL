@@ -1,0 +1,396 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F26522;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+nav{
+    background: #195C92;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    z-index: 999;
+}
+
+.logo h1{
+    justify-content: center;
+    font-family: Arial;
+    font-size: 2.5rem;
+    color: #fff;
+
+}
+
+.menu{
+    display: flex;
+    gap: 150px;
+    border-radius: 10px;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .menu{
+        gap:10px;
+    }
+    .navigation {
+        display: none;
+        width: 100%;
+        background: #F26522;
+        flex-direction: column;
+        position: absolute; /* πάνω από το περιεχόμενο */
+        top: 80px; /* κάτω από το navbar */
+        left: 0;
+        z-index: 100;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .navbar__toggle {
+        display: flex;
+    }
+}
+
+.hero p{
+    text-align: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-family: Arial;
+    padding-top: 150px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.gallery {
+  display: flex;                     /* Σειρά εικόνων */
+  overflow-x: auto;                  /* Οριζόντιο scroll */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll σε iOS */
+  scroll-behavior: smooth;           /* Ομαλό scroll */
+  gap: 10px;                         /* Απόσταση μεταξύ εικόνων */
+  padding: 10px;
+}
+
+.gallery img {
+  margin-top: 70px;
+  flex: 0 0 auto;                    /* Σταθερό μέγεθος, όχι shrink */
+  width: 80vw;                        /* Προσαρμόζεται στο πλάτος κινητού */
+  max-width: 300px;                   /* Δεν ξεπερνάει 300px */
+  height: 200px;                      /* Ύψος εικόνας */
+  object-fit: cover;                  /* Καλύπτει το πλαίσιο χωρίς να παραμορφώνεται */
+  border-radius: 10px;                /* Στρογγυλεμένες άκρες */
+}
+
+/* Απόκρυψη scrollbar σε Webkit browsers (Safari, Chrome) */
+.gallery::-webkit-scrollbar {
+  height: 0;
+  background: transparent;
+}
+
+@media (max-width: 768px){
+    .hero p{
+        font-size: 2rem;;
+    }
+}
+
+
+
+.about h1{
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 10px;
+    font-family: Arial;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    color: #ffffff;
+}
+
+
+
+.text{
+    width: 80%;
+    height: 100%;
+    border-radius: 7px;
+    margin-left: 130px;
+}
+
+.text p {
+    text-align: left;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+    text-align: justify;
+    text-align-last: center;
+    color: white;
+}
+
+@media (max-width: 768px){
+    .text{
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    padding:10px;
+    margin:20px;
+}
+
+.text p{
+    color: #ffffff;
+    font-size: 1.3rem;
+
+}
+}
+
+/*SERVICES*/
+
+.cards-section{
+   
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: white;
+  border-bottom: 3px solid #4837ff;
+  display: block;
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5.5rem;
+  padding: 2rem 1rem;
+  background-color: #F26522;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 280px;
+  min-height: 380px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.card-btn {
+  padding: 10px 20px;
+  background-color: #195C92;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+#services{
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-left: 10px;
+    font-family: Arial;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    color: #fff;
+}
+
+.main {
+  padding-top: 50px; /* ✅ Για να μην καλύπτεται από το navbar */
+}
+
+.main__container {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  min-height: 80vh;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 30px;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Form Styling */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact__form h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Arial;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+}
+
+.contact__form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact__form button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  border: none;
+  background: #195C92;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact__form button:hover {
+  background: #4837ff;
+  transform: translateY(-2px);
+}
+
+.contact{
+    color: #fff;
+
+    font-family: Arial;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .main__container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .main__content {
+    width: 100%;
+  }
+
+  #main__img {
+    max-width: 300px;
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 488px) {
+  .contact__form h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact__form button {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  #main__img {
+    width: 70%;
+  }
+}
+
+footer {
+    background: #195C92; 
+    color: #fff; padding: 1rem; 
+    text-align: center;
+    margin-top: 20px;
+}
+
+ .top a{
+    position: fixed; 
+    background-color: #145a86;
+    color: #fff; 
+    text-decoration: none;
+    right: 20px;
+
+}
+
+@media screen and (max-width: 488px){
+    .top a{
+        display: none;
+    }
+}
+
